@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<configuration>
+    <property>
+        <name>fs.default.name</name>
+        <value>hdfs://engine:9000</value>
+    </property>
+    <property>
+        <name>dfs.replication</name>
+        <value>1</value>
+    </property>
+    <property>
+        <name>dfs.permissions.enabled</name>
+        <value>false</value>
+    </property>
+    <property>
+        <name>dfs.namenode.acls.enabled</name>
+        <value>false</value>
+    </property>
+    <property>
+        <name>dfs.webhdfs.enabled</name>
+        <value>true</value>
+    </property>
+    <property>
+        <name>httpfs.proxyuser.root.hosts</name>
+        <value>*</value>
+    </property>
+    <property>
+        <name>httpsfs.proxyuser.root.groups</name>
+        <value>*</value>
+    </property>
+    <property>
+        <name>httpfs.proxyuser.hue.hosts</name>
+        <value>*</value>
+    </property>
+    <property>
+        <name>httpsfs.proxyuser.hue.groups</name>
+        <value>*</value>
+    </property>
+</configuration>

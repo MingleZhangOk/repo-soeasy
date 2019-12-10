@@ -1,0 +1,85 @@
+#-----------------------kafka begin--------------------------
+kafka:
+  bootstrapServers: host1:9093
+  groupId: frmsReceiveMsGroup
+  topics:
+    - cemReceiveMsTopic
+#-----------------------kafka end-----------------------------
+#-----------------------RMDB Hikaricp pool begin--------------------------
+databasePool:
+  jdbcUrl: jdbc:mysql://192.168.56.102:3306/nams_factory?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&failOverReadOnly=false
+  databaseName: nams_factory
+  #  username: FRMS
+  #  password: frms
+  username: root
+  password: 123456
+  #password: Hostzhuji76$   172.22.4.200  namse
+  #password: 123456   192.168.56.102  nams_factory
+  connectionTimeout: 10000
+  minimumIdle: 10 #设置连接池中最小的空闲数量:默认设置为10
+  maximumPoolSize: 10 #设置最大的空闲数量：默认设置为10
+  connectionTestQuery: select 1
+
+#-----------------------RMDB Hikaricp pool end--------------------------
+
+#-----------------------elastic begin---------------------------
+elastic:
+  serverList:
+    - 192.168.5.51
+  port: 9300
+  clusterName: frms-cluster
+  transportSniff: true
+  index: frms_storm3
+#------------------------elastic end----------------------------
+cacheType: memory
+nosqlType: elastic
+#-----------------------elastic begin-------------------------
+
+#-----------------------elastic end --------------------------
+
+#---------------------------redis begin-------------------------
+redis:
+  #single or cluster or shard
+  type: single
+  serverNodeList:
+    - 192.168.5.51
+  port: 6379
+  password: 123456
+  timeOut: 60000
+  maxTotal: 10
+  maxIdle: 5
+  minIdle: 0
+  maxAttempts: 1
+  maxWaitMillis: 3000
+#----------------------------redis end-----------------------------
+##---------------------------ftp configure--------------------------
+ftpServer:
+  ftpUrl: 127.0.0.1
+  port: 21
+  system: UNIXS
+  userName: test
+  password: test
+  timeOut: 60000
+  encode: UTF-8
+  fileFinishFlg: flg
+  sleepMinites: 30
+  startTime: 12:00:00
+  endTime: 22:00:00
+###---------------------scheduler--------------------------------------------
+scheduler:
+  eventNoFileName: E:/ftp_tst_doc/eventList.data
+##------------------systemNo------------------------
+systemNo: COMP
+encode: UTF-8
+##---------------------------ftp configure--------------------------
+#encode: UTF-8
+#license:
+#  model: TRIAL
+#  path: E:/
+#  file: YTEC-0000011135-4-0000001023.lic
+
+
+
+
+
+
