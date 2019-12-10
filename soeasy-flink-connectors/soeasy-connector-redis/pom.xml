@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>soeasy-flink-connectors</artifactId>
+        <groupId>org.mingzhang.repo</groupId>
+        <version>0.0.1</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>soeasy-connector-redis</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>org.mingzhang.repo</groupId>
+            <artifactId>soeasy-connector-common</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>io.codis.jodis</groupId>
+            <artifactId>jodis</artifactId>
+            <version>0.5.0</version>
+            <!--<exclusions>-->
+            <!--<exclusion>-->
+            <!--<groupId>org.apache.zookeeper</groupId>-->
+            <!--<artifactId>zookeeper</artifactId>-->
+            <!--</exclusion>-->
+            <!--&lt;!&ndash;<exclusion>&ndash;&gt;-->
+            <!--&lt;!&ndash;<groupId>redis.clients</groupId>&ndash;&gt;-->
+            <!--&lt;!&ndash;<artifactId>jedis</artifactId>&ndash;&gt;-->
+            <!--&lt;!&ndash;</exclusion>&ndash;&gt;-->
+            <!--<exclusion>-->
+            <!--<groupId>com.google.guava</groupId>-->
+            <!--<artifactId>guava</artifactId>-->
+            <!--</exclusion>-->
+            <!--&lt;!&ndash;<exclusion>&ndash;&gt;-->
+            <!--&lt;!&ndash;<groupId>com.fasterxml.jackson.core</groupId>&ndash;&gt;-->
+            <!--&lt;!&ndash;<artifactId>jackson-databind</artifactId>&ndash;&gt;-->
+            <!--&lt;!&ndash;</exclusion>&ndash;&gt;-->
+            <!--<exclusion>-->
+            <!--<artifactId>slf4j-api</artifactId>-->
+            <!--<groupId>org.slf4j</groupId>-->
+            <!--</exclusion>-->
+            <!--</exclusions>-->
+        </dependency>
+    </dependencies>
+
+</project>
