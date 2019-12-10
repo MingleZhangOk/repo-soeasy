@@ -15,7 +15,7 @@ import redis.clients.jedis.Pipeline;
 import java.util.*;
 
 /**
- * @author congbai
+ * @author MingZhang
  * @date 07/06/2018
  */
 public abstract class BaseRedisSinkFunction extends RichSinkFunction<Tuple2<Boolean, Row>> implements MetricFunction {

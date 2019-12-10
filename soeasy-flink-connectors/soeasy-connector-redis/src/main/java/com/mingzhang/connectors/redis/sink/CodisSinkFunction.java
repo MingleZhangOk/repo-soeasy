@@ -6,7 +6,7 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.Protocol;
 
 /**
- * @author congbai
+ * @author MingZhang
  * @date 2019/5/28
  */
 public class CodisSinkFunction extends BaseRedisSinkFunction {

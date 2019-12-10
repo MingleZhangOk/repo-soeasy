@@ -9,7 +9,7 @@ import java.util.concurrent.ExecutionException;
 import static org.apache.flink.util.Preconditions.checkArgument;
 
 /**
- * @author congbai
+ * @author MingZhang
  * @date 2019/5/27
  */
 public class Future<T> {

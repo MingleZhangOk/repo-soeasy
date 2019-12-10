@@ -33,7 +33,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * @author congbai
+ * @author MingZhang
  * @date 2019/5/21
  */
 public class SideParser {

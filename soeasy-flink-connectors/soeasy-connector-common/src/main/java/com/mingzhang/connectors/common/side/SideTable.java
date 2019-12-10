@@ -9,7 +9,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * @author congbai
+ * @author MingZhang
  * @date 2019/5/23
  */
 public class SideTable implements Serializable {

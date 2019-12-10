@@ -12,7 +12,7 @@ import org.apache.flink.types.Row;
 
 
 /**
- * @author congbai
+ * @author MingZhang
  * @date 2019/5/21
  */
 public interface ISideFunction<T> {

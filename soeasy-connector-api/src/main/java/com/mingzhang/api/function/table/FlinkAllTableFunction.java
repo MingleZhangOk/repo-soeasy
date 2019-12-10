@@ -9,7 +9,7 @@ import org.apache.flink.table.functions.TableFunction;
 import org.apache.flink.util.Preconditions;
 
 /**
- * @author congbai
+ * @author MingZhang
  * @date 31/05/2018
  */
 public class FlinkAllTableFunction extends TableFunction implements ResultTypeQueryable {

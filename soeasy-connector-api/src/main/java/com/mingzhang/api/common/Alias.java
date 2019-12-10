@@ -3,7 +3,7 @@ package com.mingzhang.api.common;
 import java.io.Serializable;
 
 /**
- * @author congbai
+ * @author MingZhang
  * @date 2019/5/20
  */
 public class Alias implements Serializable {

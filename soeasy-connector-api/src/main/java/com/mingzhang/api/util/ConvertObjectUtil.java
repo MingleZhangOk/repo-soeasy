@@ -11,7 +11,7 @@ import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 
 /**
- * @author congbai
+ * @author MingZhang
  * @date 2019/5/23
  */
 public class ConvertObjectUtil {

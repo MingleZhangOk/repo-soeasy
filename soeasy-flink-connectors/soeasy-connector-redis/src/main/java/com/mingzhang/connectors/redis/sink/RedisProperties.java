@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * @author congbai
+ * @author MingZhang
  * @date 2018/7/12
  */
 public class RedisProperties implements Serializable {

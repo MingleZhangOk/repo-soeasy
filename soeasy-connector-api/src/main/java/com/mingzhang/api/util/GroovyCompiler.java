@@ -19,7 +19,7 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * @author congbai
+ * @author MingZhang
  */
 public class GroovyCompiler {
 

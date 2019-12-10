@@ -8,7 +8,7 @@ import org.apache.flink.table.functions.ScalarFunction;
 import org.apache.flink.util.Preconditions;
 
 /**
- * @author congbai
+ * @author MingZhang
  * @date 31/05/2018
  */
 public class FlinkAllScalarFunction extends ScalarFunction {

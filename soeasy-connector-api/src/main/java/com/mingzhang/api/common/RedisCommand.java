@@ -1,7 +1,7 @@
 package com.mingzhang.api.common;
 
 /**
- * @author congbai
+ * @author MingZhang
  * @date 2019/5/28
  */
 public enum  RedisCommand {

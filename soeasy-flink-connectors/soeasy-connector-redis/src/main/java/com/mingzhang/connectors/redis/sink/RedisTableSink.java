@@ -15,7 +15,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * @author congbai
+ * @author MingZhang
  * @date 07/06/2018
  */
 public class RedisTableSink implements UpsertStreamTableSink<Row> {

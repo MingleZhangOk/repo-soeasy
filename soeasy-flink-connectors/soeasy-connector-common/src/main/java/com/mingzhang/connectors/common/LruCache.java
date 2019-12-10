@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 import static org.apache.flink.util.Preconditions.checkArgument;
 
 /**
- * @author congbai
+ * @author MingZhang
  * @date 2019/5/23
  */
 public class LruCache<T> implements Cache<T>{

@@ -3,7 +3,7 @@ package com.mingzhang.connectors.common;
 import java.util.Optional;
 
 /**
- * @author congbai
+ * @author MingZhang
  * @date 2019/5/22
  */
 public interface Cache<T> {

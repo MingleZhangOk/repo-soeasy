@@ -1,7 +1,7 @@
 package com.mingzhang.api.common;
 
 /**
- * @author congbai
+ * @author MingZhang
  * @date 2019/5/23
  */
 public enum  CacheType {

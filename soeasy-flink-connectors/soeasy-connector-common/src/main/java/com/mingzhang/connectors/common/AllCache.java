@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Optional;
 
 /**
- * @author congbai
+ * @author MingZhang
  * @date 2019/5/23
  */
 public class AllCache<T> implements Cache<T> {

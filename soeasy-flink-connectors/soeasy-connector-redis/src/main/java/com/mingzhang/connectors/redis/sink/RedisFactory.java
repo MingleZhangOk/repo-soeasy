@@ -3,7 +3,7 @@ package com.mingzhang.connectors.redis.sink;
 import org.apache.flink.api.common.typeinfo.TypeInformation;
 
 /**
- * @author congbai
+ * @author MingZhang
  * @date 2019/5/28
  */
 public class RedisFactory {

@@ -5,7 +5,7 @@ import redis.clients.jedis.JedisPoolConfig;
 import java.io.Serializable;
 
 /**
- * @author congbai
+ * @author MingZhang
  * @date 2019/5/29
  */
 public class PoolConfig extends JedisPoolConfig implements Serializable {
