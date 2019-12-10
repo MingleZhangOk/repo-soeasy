@@ -32,10 +32,10 @@ import java.util.*;
  * <!--</dependency>-->
  */
 public class FlinkJobDemo {
-    private static String kafkaServers = "172.22.4.219:9092,172.22.4.220:9092,172.22.4.221:9092";
+    private static String kafkaServers = "192.168.56.102:9092";
     private static String kafkaTopic = "nams_cdc_jbk";
 
-    private static String esServers = "172.22.4.219,172.22.4.220,172.22.4.221";
+    private static String esServers = "192.168.56.102";
     private static String esClusterName = "my-application";
     private static String esIndex = "sd_test";
     private static String esVersion = "642";
