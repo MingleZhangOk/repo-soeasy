@@ -1,21 +1,14 @@
-/*
-package cn.com.mingzhang.test.table.zdemo.elasticsearch.stream;
+package com.mingzhang.table.impl.elastic;
 
 import com.mingzhang.table.common.FlinkStreamInitDemo;
-import cn.com.mingzhang.test.table.zdemo.connect.stream.KafkaConnectDemo;
+import com.mingzhang.table.source.kafka.KafkaConnectDemo;
 import org.apache.flink.api.common.typeinfo.TypeInformation;
 import org.apache.flink.api.common.typeinfo.Types;
-import org.junit.Test;
 
 public class MyElasticsearchLookUpTest {
 
     public static String tableName = "testElasticsearch";
     public static String funcName = "getElasticsearch";
-
-    @Test
-    public void test() throws Exception {
-        MyElasticsearchLookUpTest.main(new String[]{});
-    }
 
     public static void main(String[] args) throws Exception {
 
@@ -44,4 +37,3 @@ public class MyElasticsearchLookUpTest {
     }
 
 }
-*/
