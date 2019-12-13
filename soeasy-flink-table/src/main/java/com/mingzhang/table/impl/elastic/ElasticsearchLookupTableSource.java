@@ -23,12 +23,12 @@ public class ElasticsearchLookupTableSource implements StreamTableSource<Row>, L
     private final String type;
     private final String version;
     private final int port;
-    private final String TimeInterval;
+    private final String timeInterval;
     private final String clusterName;
     private final Settings settings;
 
     public ElasticsearchLookupTableSource(String[] fieldNames, TypeInformation[] fieldTypes, String servers,
-                                          String index, String type, String version, int port, String TimeInterval,
+                                          String index, String type, String version, int port, String timeInterval,
                                           String clusterName, Settings settings) {
         this.fieldNames = fieldNames;
         this.fieldTypes = fieldTypes;
@@ -37,17 +37,24 @@ public class ElasticsearchLookupTableSource implements StreamTableSource<Row>, L
         this.type = type;
         this.version = version;
         this.port = port;
-        this.TimeInterval = TimeInterval;
+        this.timeInterval = timeInterval;
         this.clusterName = clusterName;
         this.settings = settings;
 
     }
 
-
     //同步方法
     @Override
     public TableFunction<Row> getLookupFunction(String[] strings) {
         return MyElasticsearchLookupFunction.Builder.getBuilder()
+                .setServers(servers)
+                .setClusterName(clusterName)
+                .setVersion(version)
+                .setIndex(index)
+                .setType(type)
+                .setPort(port)
+                .setTimeInterval(timeInterval)
+                .setSettings(settings)
                 .withFieldNames(fieldNames)
                 .withFieldTypes(fieldTypes)
                 .build();
