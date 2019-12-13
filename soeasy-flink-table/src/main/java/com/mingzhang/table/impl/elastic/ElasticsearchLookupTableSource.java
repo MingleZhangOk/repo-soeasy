@@ -12,16 +12,37 @@ import org.apache.flink.table.sources.StreamTableSource;
 import org.apache.flink.table.types.DataType;
 import org.apache.flink.table.types.utils.TypeConversions;
 import org.apache.flink.types.Row;
+import org.elasticsearch.common.settings.Settings;
 
 public class ElasticsearchLookupTableSource implements StreamTableSource<Row>, LookupableTableSource<Row> {
 
     private final String[] fieldNames;
     private final TypeInformation[] fieldTypes;
+    private final String servers;
+    private final String index;
+    private final String type;
+    private final String version;
+    private final int port;
+    private final String TimeInterval;
+    private final String clusterName;
+    private final Settings settings;
 
-    public ElasticsearchLookupTableSource(String[] fieldNames, TypeInformation[] fieldTypes) {
+    public ElasticsearchLookupTableSource(String[] fieldNames, TypeInformation[] fieldTypes, String servers,
+                                          String index, String type, String version, int port, String TimeInterval,
+                                          String clusterName, Settings settings) {
         this.fieldNames = fieldNames;
         this.fieldTypes = fieldTypes;
+        this.servers = servers;
+        this.index = index;
+        this.type = type;
+        this.version = version;
+        this.port = port;
+        this.TimeInterval = TimeInterval;
+        this.clusterName = clusterName;
+        this.settings = settings;
+
     }
+
 
     //同步方法
     @Override
@@ -67,6 +88,14 @@ public class ElasticsearchLookupTableSource implements StreamTableSource<Row>, L
     public static final class Builder {
         private String[] fieldNames;
         private TypeInformation[] fieldTypes;
+        private String servers;
+        private String index;
+        private String type;
+        private String version;
+        private int port;
+        private String timeInterval;
+        private String clusterName;
+        private Settings settings;
 
         private Builder() {
         }
@@ -85,8 +114,50 @@ public class ElasticsearchLookupTableSource implements StreamTableSource<Row>, L
             return this;
         }
 
-        public ElasticsearchLookupTableSource build() {
-            return new ElasticsearchLookupTableSource(fieldNames, fieldTypes);
+        public ElasticsearchLookupTableSource.Builder setIndex(String index) {
+            this.index = index;
+            return this;
         }
+
+        public ElasticsearchLookupTableSource.Builder setType(String type) {
+            this.type = type;
+            return this;
+        }
+
+        public ElasticsearchLookupTableSource.Builder setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+
+        public ElasticsearchLookupTableSource.Builder setPort(int port) {
+            this.port = port;
+            return this;
+        }
+
+        public ElasticsearchLookupTableSource.Builder setServers(String servers) {
+            this.servers = servers;
+            return this;
+        }
+
+        public ElasticsearchLookupTableSource.Builder setTimeInterval(String timeInterval) {
+            this.timeInterval = timeInterval;
+            return this;
+        }
+
+        public ElasticsearchLookupTableSource.Builder setClusterName(String clusterName) {
+            this.clusterName = clusterName;
+            return this;
+        }
+
+        public ElasticsearchLookupTableSource.Builder setSettings(Settings settings) {
+            this.settings = settings;
+            return this;
+        }
+
+        public ElasticsearchLookupTableSource build() {
+            return new ElasticsearchLookupTableSource(fieldNames, fieldTypes, servers, index, type, version, port, timeInterval, clusterName, settings);
+        }
+
+
     }
 }

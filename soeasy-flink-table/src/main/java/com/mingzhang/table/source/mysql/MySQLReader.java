@@ -11,7 +11,7 @@ import java.sql.ResultSet;
 
 public class MySQLReader {
 
-    static String jdbcUrl = "jdbc:mysql://192.168.56.102:3306/nams_batch?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&failOverReadOnly=false";
+    static String jdbcUrl = "jdbc:mysql://192.168.56.102:3306/nams_engine?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&failOverReadOnly=false";
     static String username = "root";
     static String password = "123456";
     static String tableName = "org_table";

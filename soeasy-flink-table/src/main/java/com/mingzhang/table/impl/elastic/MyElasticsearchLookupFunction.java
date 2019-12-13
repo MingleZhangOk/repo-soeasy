@@ -17,26 +17,40 @@ import java.util.Set;
 public class MyElasticsearchLookupFunction extends TableFunction<Row> {
 
     TransportClient transportClient;
-    String doc = "_doc";
-    String hosts = "192.168.56.102";
-    Integer port = 9300;
-    String index = "test";
     private final String[] fieldNames;
     private final TypeInformation[] fieldTypes;
+    private final String servers;// = "192.168.56.102"
+    private final String index;//= "test"
+    private final String type;//= "_doc"
+    private final String version;
+    private final int port;// = 9300
+    private final String TimeInterval;
+    private final String clusterName;
+    private final Settings settings;
 
-    public MyElasticsearchLookupFunction(String[] fieldNames, TypeInformation[] fieldTypes) {
+
+    public MyElasticsearchLookupFunction(String[] fieldNames, TypeInformation[] fieldTypes, String servers,
+                                         String index, String type, String version, int port, String TimeInterval,
+                                         String clusterName, Settings settings) {
         this.fieldNames = fieldNames;
         this.fieldTypes = fieldTypes;
+        this.servers = servers;
+        this.index = index;
+        this.type = type;
+        this.version = version;
+        this.port = port;
+        this.TimeInterval = TimeInterval;
+        this.clusterName = clusterName;
+        this.settings = settings;
     }
 
     @Override
     public void open(FunctionContext context) throws Exception {
+        Settings build = Settings.builder().build();
         Settings settings = Settings.builder()
-                .put("client.transport.sniff", true) //增加嗅探机制，找到ES集群
-                .put("cluster.name", "my-application")  // 设置集群名称
-                .put("thread_pool.search.size", 20)// 增加线程池个数，暂时设为20
+                .put(build)
                 .build();
-        TransportAddress transportAddress = new TransportAddress(InetAddress.getByName(hosts), port);
+        TransportAddress transportAddress = new TransportAddress(InetAddress.getByName(servers), port);
         transportClient = new PreBuiltTransportClient(settings).addTransportAddresses(transportAddress);
     }
 
@@ -44,7 +58,7 @@ public class MyElasticsearchLookupFunction extends TableFunction<Row> {
         String id = paramas[0].toString();
         String key = paramas[1].toString();
         StringBuilder value = new StringBuilder();
-        GetRequestBuilder getRequestBuilder = transportClient.prepareGet(index, doc, id);
+        GetRequestBuilder getRequestBuilder = transportClient.prepareGet(index, type, id);
         Map<String, Object> source = getRequestBuilder.get().getSource();
         Set<Map.Entry<String, Object>> entries = source.entrySet();
         for (Map.Entry<String, Object> entry : entries) {
@@ -56,6 +70,14 @@ public class MyElasticsearchLookupFunction extends TableFunction<Row> {
     public static final class Builder {
         private String[] fieldNames;
         private TypeInformation[] fieldTypes;
+        private String servers;
+        private String index;
+        private String type;
+        private String version;
+        private int port;
+        private String TimeInterval;
+        private String clusterName;
+        private Settings settings;
 
         private Builder() {
         }
@@ -74,8 +96,49 @@ public class MyElasticsearchLookupFunction extends TableFunction<Row> {
             return this;
         }
 
+
+        public MyElasticsearchLookupFunction.Builder setIndex(String index) {
+            this.index = index;
+            return this;
+        }
+
+        public MyElasticsearchLookupFunction.Builder setType(String type) {
+            this.type = type;
+            return this;
+        }
+
+        public MyElasticsearchLookupFunction.Builder setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+
+        public MyElasticsearchLookupFunction.Builder setPort(int port) {
+            this.port = port;
+            return this;
+        }
+
+        public MyElasticsearchLookupFunction.Builder setServers(String servers) {
+            this.servers = servers;
+            return this;
+        }
+
+        public MyElasticsearchLookupFunction.Builder setTimeInterval(String timeInterval) {
+            TimeInterval = timeInterval;
+            return this;
+        }
+
+        public MyElasticsearchLookupFunction.Builder setClusterName(String clusterName) {
+            this.clusterName = clusterName;
+            return this;
+        }
+
+        public MyElasticsearchLookupFunction.Builder setSettings(Settings settings) {
+            this.settings = settings;
+            return this;
+        }
+
         public MyElasticsearchLookupFunction build() {
-            return new MyElasticsearchLookupFunction(fieldNames, fieldTypes);
+            return new MyElasticsearchLookupFunction(fieldNames, fieldTypes, servers, index, type, version, port, TimeInterval, clusterName, settings);
         }
     }
 }
