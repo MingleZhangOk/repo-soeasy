@@ -22,7 +22,7 @@ public class ElasticsearchRESThighClient {
 
     private static String servers = "192.168.56.102";
     private static String port = "9200";
-    private static String index = "my-application";
+    private static String index = "datalog_sectps";
     private static String type = "_doc";
     private static RestHighLevelClient highClient;
 
@@ -35,8 +35,9 @@ public class ElasticsearchRESThighClient {
                 .collect(Collectors.toList());
 
         highClient = getHighClient(httpHosts);
-        queryTest4();
+        queryTest5();
         close();
+
     }
 
     private static void close() throws Exception {
@@ -60,14 +61,16 @@ public class ElasticsearchRESThighClient {
         sourceBuilder.from(0);
         sourceBuilder.size(10);
         sourceBuilder.fetchSource(new String[]{"title"}, new String[]{});
-        MatchQueryBuilder matchQueryBuilder = QueryBuilders.matchQuery("title", "费德勒");
-        TermQueryBuilder termQueryBuilder = QueryBuilders.termQuery("tag", "体育");
-        RangeQueryBuilder rangeQueryBuilder = QueryBuilders.rangeQuery("publishTime");
-        rangeQueryBuilder.gte("2018-01-26T08:00:00Z");
-        rangeQueryBuilder.lte("2018-01-26T20:00:00Z");
+//        MatchQueryBuilder matchQueryBuilder = QueryBuilders.matchQuery("title", "费德勒");
+//        TermQueryBuilder termQueryBuilder = QueryBuilders.termQuery("tag", "体育");
+        RangeQueryBuilder rangeQueryBuilder = QueryBuilders.rangeQuery("SysTime");
+//        rangeQueryBuilder.gte("2018-01-26T08:00:00Z");
+        rangeQueryBuilder.gte("201911150000");
+//        rangeQueryBuilder.lte("2018-01-26T20:00:00Z");
+        rangeQueryBuilder.lt("201911160000");
         BoolQueryBuilder boolBuilder = QueryBuilders.boolQuery();
-        boolBuilder.must(matchQueryBuilder);
-        boolBuilder.must(termQueryBuilder);
+//        boolBuilder.must(matchQueryBuilder);
+//        boolBuilder.must(termQueryBuilder);
         boolBuilder.must(rangeQueryBuilder);
         sourceBuilder.query(boolBuilder);
         SearchRequest searchRequest = new SearchRequest(index);
@@ -141,4 +144,29 @@ public class ElasticsearchRESThighClient {
             e.printStackTrace();
         }
     }
+    private static void queryTest5() {
+        SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
+        sourceBuilder.from(0);
+        sourceBuilder.fetchSource(new String[]{"title"}, new String[]{});
+        RangeQueryBuilder rangeQueryBuilder = QueryBuilders.rangeQuery("SysTime");
+        rangeQueryBuilder.gte("201911150000");
+        rangeQueryBuilder.lt("201911160000");
+        BoolQueryBuilder boolBuilder = QueryBuilders.boolQuery();
+//        boolBuilder.must(matchQueryBuilder);
+//        boolBuilder.must(termQueryBuilder);
+        boolBuilder.must(rangeQueryBuilder);
+        sourceBuilder.query(boolBuilder);
+        SearchRequest searchRequest = new SearchRequest(index);
+        searchRequest.types(type);
+        searchRequest.source(sourceBuilder);
+        try {
+            SearchResponse response = highClient.search(searchRequest);
+            System.out.println(response);
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+
 }
