@@ -12,7 +12,7 @@ public class MyElasticsearchLookUpTest {
 
     public static void main(String[] args) throws Exception {
 
-//{"id":"001","nams":"jerry","age":12.34,"stat":"sha"}
+        //{"id":"001","nams":"jerry","age":12.34,"stat":"sha"}
         KafkaConnectDemo.registerKafkaSourceTable();
         registerElasticsearchFunction();
 

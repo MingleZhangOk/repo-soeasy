@@ -19,11 +19,11 @@ public class MyElasticsearchLookupFunction extends TableFunction<Row> {
     TransportClient transportClient;
     private final String[] fieldNames;
     private final TypeInformation[] fieldTypes;
-    private final String servers;// = "192.168.56.102"
-    private final String index;//= "test"
-    private final String type;//= "_doc"
+    private final String servers = "192.168.56.102";
+    private final String index = "test";
+    private final String type = "_doc";
     private final String version;
-    private final int port;// = 9300
+    private final int port = 9200;
     private final String TimeInterval;
     private final String clusterName;
     private final Settings settings;
@@ -34,11 +34,11 @@ public class MyElasticsearchLookupFunction extends TableFunction<Row> {
                                          String clusterName, Settings settings) {
         this.fieldNames = fieldNames;
         this.fieldTypes = fieldTypes;
-        this.servers = servers;
-        this.index = index;
-        this.type = type;
+//        this.servers = servers;
+//        this.index = index;
+//        this.type = type;
         this.version = version;
-        this.port = port;
+//        this.port = port;
         this.TimeInterval = TimeInterval;
         this.clusterName = clusterName;
         this.settings = settings;
