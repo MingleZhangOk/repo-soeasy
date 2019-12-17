@@ -62,14 +62,14 @@ public class ElasticTable implements BatchTableSource<Row>, LookupableTableSourc
 //
 //        }
         searchSourceBuilder.from(0);
-        searchSourceBuilder.size(5000);
+        searchSourceBuilder.size(10001);
         types[0] = Types.STRING;
         types[1] = Types.LONG;
         names[0] = "f0";
         names[1] = "f1";
         RangeQueryBuilder queryBuilder =
                 QueryBuilders.rangeQuery("SysTime.keyword")
-                        .gte("").lte("").format("yyyyMMddHHmm||yyyyMMddHHmm");
+                        .gte("201911151141").lte("201911151611").format("yyyyMMddHHmm||yyyyMMddHHmm");
         BoolQueryBuilder boolQueryBuilder = QueryBuilders.boolQuery();
         boolQueryBuilder.must(queryBuilder);
         searchSourceBuilder.query(boolQueryBuilder);

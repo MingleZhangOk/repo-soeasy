@@ -48,6 +48,9 @@ public class MyElasticsearchLookupFunction extends TableFunction<Row> {
     public void open(FunctionContext context) throws Exception {
         Settings build = Settings.builder().build();
         Settings settings = Settings.builder()
+                .put("client.transport.sniff", true) //增加嗅探机制，找到ES集群
+                .put("cluster.name", "my-application")  // 设置集群名称
+                .put("thread_pool.search.size", 20)// 增加线程池个数，暂时设为20
                 .put(build)
                 .build();
         TransportAddress transportAddress = new TransportAddress(InetAddress.getByName(servers), port);
