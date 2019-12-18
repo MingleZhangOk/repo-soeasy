@@ -9,7 +9,7 @@ import org.elasticsearch.common.unit.TimeValue;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.transport.client.PreBuiltTransportClient;
 
-import java.net.InetAddress;
+import java.net.InetSocketAddress;
 import java.util.Date;
 import java.util.List;
 
@@ -21,8 +21,11 @@ import java.util.List;
  */
 public class ElasticSearchScoll {
 
-    private static String index = "test_index35";
-    private static String type = "test_type35";
+    private static String esHost = "192.168.56.102";
+    private static int esPort = 9300;
+    private static String index = ".monitoring-es-6-2019.12.06";
+    private static String type = "doc";
+    private static int size = 5000;
 
     public static void main(String[] args) throws Exception {
 
@@ -34,7 +37,9 @@ public class ElasticSearchScoll {
         // 创建客户端
         PreBuiltTransportClient transportClient = new PreBuiltTransportClient(settings);
         // 添加es的节点信息，可以添加1个或多个
-        TransportAddress transportAddress = new TransportAddress(InetAddress.getByName("192.168.56.102"), 9300);
+        InetSocketAddress inetSocketAddress = new InetSocketAddress(esHost, esPort);
+//        TransportAddress transportAddress = new TransportAddress(InetAddress.getByName(esHost), esPort);
+        TransportAddress transportAddress = new TransportAddress(inetSocketAddress);
         transportClient.addTransportAddresses(transportAddress);
         // 连接到的节点
         List<DiscoveryNode> discoveryNodes = transportClient.connectedNodes();
@@ -48,12 +53,12 @@ public class ElasticSearchScoll {
         SearchRequestBuilder builder = transportClient.prepareSearch(index);
 //        builder.setQuery(QueryBuilders.matchQuery("age", 35));
         SearchResponse res = builder.get();
-        long count =res.getHits().getTotalHits();
+        long count = res.getHits().getTotalHits();
 
 //        long count = transportClient.prepareCount(index).setTypes(type).execute().actionGet().getCount();//获取所有记录
         SearchRequestBuilder requestBuilder = transportClient.prepareSearch(index).setTypes(type).setQuery(QueryBuilders.matchAllQuery());
         for (int i = 0, sum = 0; sum < count; i++) {
-            SearchResponse response = requestBuilder.setFrom(i).setSize(5000).execute().actionGet();
+            SearchResponse response = requestBuilder.setFrom(i).setSize(size).execute().actionGet();
             sum += response.getHits().getHits().length;
             System.out.println("总量" + count + " 已经查到" + sum);
         }
@@ -64,17 +69,22 @@ public class ElasticSearchScoll {
         System.out.println("scroll 模式启动！");
         begin = new Date();
         SearchResponse scrollResponse = transportClient.prepareSearch(index)
-                .setSearchType("_doc")   //在ES 5.x版本中不存在SearchType.SCAN用法，可以用addSort(SortBuilders.fieldSort("_doc"))
-                .setSize(1000) //实际返回的数量为size*index的主分片个数（在ES 5.x版本中，返回的数据量就是参数中指定的数据量）
-                .setScroll(TimeValue.timeValueMinutes(1))
+//                .setSearchType(type)   //在ES 5.x版本中不存在SearchType.SCAN用法，可以用addSort(SortBuilders.fieldSort("_doc"))
+//                .addSort(SortBuilders.fieldSort(type))
+                .setSize(size) //实际返回的数量为size*index的主分片个数（在ES 5.x版本中，返回的数据量就是参数中指定的数据量）
+                .setScroll(TimeValue.timeValueMinutes(8))
                 .execute().actionGet();
         count = scrollResponse.getHits().getTotalHits();//获取所有记录，第一次不返回数据(在ES 5.x版本中，第一次有数据返回)
-        for (int sum = 0; sum < count; ) {
+        for (int sum = size; sum < count; ) {
             scrollResponse = transportClient.prepareSearchScroll(scrollResponse.getScrollId())
                     .setScroll(TimeValue.timeValueMinutes(8))
                     .execute().actionGet();
             sum += scrollResponse.getHits().getHits().length;
-            System.out.println("总量" + count + " 已经查到" + sum);
+            System.out.println("总量" + count + " 已经查到" + sum + ",取数据长度为" + scrollResponse.getHits().getHits().length);
+            if (scrollResponse.getHits().getHits().length == 0) {
+                System.out.println("取数长度为0，取数结束");
+                break;
+            }
         }
         end = new Date();
         System.out.println("耗时: " + (end.getTime() - begin.getTime()));
