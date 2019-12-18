@@ -27,8 +27,8 @@ public class ElasticSearchScoll {
     public static void main(String[] args) throws Exception {
 
         Settings settings = Settings.builder()
-                .put("cluster.name", "contentmanageres")
-                .put("client.transport.sniff", true)// 开启ES嗅探功能，确保集群连上多个节点
+                .put("cluster.name", "my-application")
+                .put("client.transport.sniff", false)// 开启ES嗅探功能，确保集群连上多个节点
                 .build();
 
         // 创建客户端
@@ -46,7 +46,7 @@ public class ElasticSearchScoll {
         Date begin = new Date();
 
         SearchRequestBuilder builder = transportClient.prepareSearch(index);
-        builder.setQuery(QueryBuilders.matchQuery("age", 35));
+//        builder.setQuery(QueryBuilders.matchQuery("age", 35));
         SearchResponse res = builder.get();
         long count =res.getHits().getTotalHits();
 
