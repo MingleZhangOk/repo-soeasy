@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
  */
 public class PattrnTest {
     public static void main(String[] args) {
-        demo4();
+        demo5();
     }
 
     public static void demo1() {
@@ -84,6 +84,24 @@ public class PattrnTest {
             System.out.println("Found value: " + m.group(1));
             System.out.println("Found value: " + m.group(2));
             System.out.println("Found value: " + m.group(3));
+        } else {
+            System.out.println("NO MATCH");
+        }
+    }
+
+
+    public static void demo5() {
+        String line = "WHERE   SYSSECOND(yyyyMMddHH)   BETWEEN    NOWTIME   AND     NOWTIME-1H";
+        String pattern1 = "\\((\\D*)\\)";
+        String pattern = " (\\D*)\\(";
+
+        // 创建 Pattern 对象
+        Pattern r = Pattern.compile(pattern);
+
+        // 现在创建 matcher 对象
+        Matcher m = r.matcher(line);
+        if (m.find()) {
+            System.out.println("Found value: " + m.group(1).trim());
         } else {
             System.out.println("NO MATCH");
         }

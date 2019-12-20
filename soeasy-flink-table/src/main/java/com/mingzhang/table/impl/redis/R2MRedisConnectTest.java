@@ -25,6 +25,9 @@ public class R2MRedisConnectTest {
         Jedis jedis = jedisPool.getResource();
         System.out.println("testIncr====" + jedis.incr("testIncr"));
         System.out.println("putTestAdd====" + jedis.incrBy("testAdd", 100));
+
+        Double testAdd = jedis.incrByFloat("testAdd", 100);
+
         System.out.println("a=====" + jedis.set("a", "13"));
         System.out.println("s====" + jedis.get("a"));
         System.out.println("testAdd====" + jedis.get("testAdd"));

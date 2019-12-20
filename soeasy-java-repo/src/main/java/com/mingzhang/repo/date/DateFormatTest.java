@@ -35,4 +35,8 @@ public class DateFormatTest {
         String dateStr = localDate.format(DateTimeFormatter.ofPattern("yyyyMMddHH"));
         System.out.println(dateStr);
     }
+
+    public static void demo3(){
+
+    }
 }
