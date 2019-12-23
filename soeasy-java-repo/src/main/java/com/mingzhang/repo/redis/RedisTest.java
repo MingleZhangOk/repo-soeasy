@@ -13,10 +13,17 @@ public class RedisTest {
     static Jedis jedis = RedisUtil.getJedis();
 
     public static void test1() {
-        Double a = jedis.incrByFloat("a", 12.23);
+        Double a = jedis.incrByFloat("a", 100.3);
         System.out.println(a);
-        Double a1 = jedis.incrByFloat("a", -123);
+        Double a1 = jedis.incrByFloat("a", -200.3);
         System.out.println(a1);
+    }
+    public static void  test2(){
+        System.out.println(jedis.get("a"));
+    }
+
+    public static void  test3(){
+        System.out.println(jedis.set("a","0"));
     }
 
     public static void main(String[] args) {
