@@ -26,7 +26,10 @@ public class RedisTest {
         System.out.println(jedis.set("a","0"));
     }
 
+    public static void test4(){
+    }
+
     public static void main(String[] args) {
-        test1();
+        test4();
     }
 }
