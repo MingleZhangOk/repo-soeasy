@@ -14,7 +14,7 @@ import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalAdjusters;
 import java.util.List;
 
-import com.google.common.collect.Lists;
+//import com.google.common.collect.Lists;
 
 /**
  * java1.8 的新特性，解决SimpleDateFormat的线程问题<br>
@@ -519,7 +519,8 @@ public class DateUtil8 {
      * <li>结果为：[2019-02-28,2019-12-31, 2020-01-01,2020-05-25]</li><br>
      */
     public static List<String> getPieDateRange(String startDate, String endDate, String period) {
-        List<String> result = Lists.newArrayList();
+//        List<String> result = Lists.newArrayList();
+        List<String> result = null;
         LocalDate end = LocalDate.parse(endDate, yyyyMMdd_EN);
         LocalDate start = LocalDate.parse(startDate, yyyyMMdd_EN);
         LocalDate tmp = start;
