@@ -58,66 +58,66 @@
             </exclusions>
         </dependency>
         <!--<dependency>-->
-            <!--<groupId>org.apache.flink</groupId>-->
-            <!--<artifactId>flink-clients_${scala.binary.version}</artifactId>-->
-            <!--<version>${flink.version}</version>-->
+        <!--<groupId>org.apache.flink</groupId>-->
+        <!--<artifactId>flink-clients_${scala.binary.version}</artifactId>-->
+        <!--<version>${flink.version}</version>-->
         <!--</dependency>-->
         <!--<dependency>-->
-            <!--<groupId>org.apache.flink</groupId>-->
-            <!--<artifactId>flink-streaming-scala_${scala.binary.version}</artifactId>-->
-            <!--<version>${flink.version}</version>-->
+        <!--<groupId>org.apache.flink</groupId>-->
+        <!--<artifactId>flink-streaming-scala_${scala.binary.version}</artifactId>-->
+        <!--<version>${flink.version}</version>-->
         <!--</dependency>-->
         <!--<dependency>-->
-            <!--<groupId>org.apache.flink</groupId>-->
-            <!--<artifactId>flink-json</artifactId>-->
-            <!--<version>${flink.version}</version>-->
+        <!--<groupId>org.apache.flink</groupId>-->
+        <!--<artifactId>flink-json</artifactId>-->
+        <!--<version>${flink.version}</version>-->
         <!--</dependency>-->
         <!--<dependency>-->
-            <!--<groupId>org.apache.flink</groupId>-->
-            <!--<artifactId>flink-streaming-java_${scala.binary.version}</artifactId>-->
-            <!--<version>${flink.version}</version>-->
+        <!--<groupId>org.apache.flink</groupId>-->
+        <!--<artifactId>flink-streaming-java_${scala.binary.version}</artifactId>-->
+        <!--<version>${flink.version}</version>-->
         <!--</dependency>-->
         <!--<dependency>-->
-            <!--<groupId>org.apache.flink</groupId>-->
-            <!--<artifactId>flink-connector-kafka-base_${scala.binary.version}</artifactId>-->
-            <!--<version>${flink.version}</version>-->
-            <!--<exclusions>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>slf4j-api</artifactId>-->
-                    <!--<groupId>org.slf4j</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>snappy-java</artifactId>-->
-                    <!--<groupId>org.xerial.snappy</groupId>-->
-                <!--</exclusion>-->
-            <!--</exclusions>-->
+        <!--<groupId>org.apache.flink</groupId>-->
+        <!--<artifactId>flink-connector-kafka-base_${scala.binary.version}</artifactId>-->
+        <!--<version>${flink.version}</version>-->
+        <!--<exclusions>-->
+        <!--<exclusion>-->
+        <!--<artifactId>slf4j-api</artifactId>-->
+        <!--<groupId>org.slf4j</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<artifactId>snappy-java</artifactId>-->
+        <!--<groupId>org.xerial.snappy</groupId>-->
+        <!--</exclusion>-->
+        <!--</exclusions>-->
         <!--</dependency>-->
         <!--<dependency>-->
-            <!--<groupId>org.apache.flink</groupId>-->
-            <!--<artifactId>flink-connector-kafka-0.10_${scala.binary.version}</artifactId>-->
-            <!--<version>${flink.version}</version>-->
+        <!--<groupId>org.apache.flink</groupId>-->
+        <!--<artifactId>flink-connector-kafka-0.10_${scala.binary.version}</artifactId>-->
+        <!--<version>${flink.version}</version>-->
         <!--</dependency>-->
         <!--<dependency>-->
-            <!--<groupId>org.apache.flink</groupId>-->
-            <!--<artifactId>flink-connector-kafka-0.11_${scala.binary.version}</artifactId>-->
-            <!--<version>${flink.version}</version>-->
-            <!--<exclusions>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>kafka-clients</artifactId>-->
-                    <!--<groupId>org.apache.kafka</groupId>-->
-                <!--</exclusion>-->
-            <!--</exclusions>-->
+        <!--<groupId>org.apache.flink</groupId>-->
+        <!--<artifactId>flink-connector-kafka-0.11_${scala.binary.version}</artifactId>-->
+        <!--<version>${flink.version}</version>-->
+        <!--<exclusions>-->
+        <!--<exclusion>-->
+        <!--<artifactId>kafka-clients</artifactId>-->
+        <!--<groupId>org.apache.kafka</groupId>-->
+        <!--</exclusion>-->
+        <!--</exclusions>-->
         <!--</dependency>-->
         <!--<dependency>-->
-            <!--<groupId>org.apache.flink</groupId>-->
-            <!--<artifactId>flink-connector-kafka_${scala.binary.version}</artifactId>-->
-            <!--<version>${flink.version}</version>-->
-            <!--<exclusions>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>kafka-clients</artifactId>-->
-                    <!--<groupId>org.apache.kafka</groupId>-->
-                <!--</exclusion>-->
-            <!--</exclusions>-->
+        <!--<groupId>org.apache.flink</groupId>-->
+        <!--<artifactId>flink-connector-kafka_${scala.binary.version}</artifactId>-->
+        <!--<version>${flink.version}</version>-->
+        <!--<exclusions>-->
+        <!--<exclusion>-->
+        <!--<artifactId>kafka-clients</artifactId>-->
+        <!--<groupId>org.apache.kafka</groupId>-->
+        <!--</exclusion>-->
+        <!--</exclusions>-->
         <!--</dependency>-->
         <dependency>
             <groupId>org.apache.flink</groupId>
@@ -135,24 +135,24 @@
             <version>${flink.version}</version>
         </dependency>
         <!--<dependency>-->
-            <!--<groupId>org.apache.flink</groupId>-->
-            <!--<artifactId>flink-connector-elasticsearch-base_${scala.binary.version}</artifactId>-->
-            <!--<version>${flink.version}</version>-->
+        <!--<groupId>org.apache.flink</groupId>-->
+        <!--<artifactId>flink-connector-elasticsearch-base_${scala.binary.version}</artifactId>-->
+        <!--<version>${flink.version}</version>-->
         <!--</dependency>-->
         <!--<dependency>-->
-            <!--<groupId>org.apache.flink</groupId>-->
-            <!--<artifactId>flink-connector-elasticsearch5_${scala.binary.version}</artifactId>-->
-            <!--<version>${flink.version}</version>-->
+        <!--<groupId>org.apache.flink</groupId>-->
+        <!--<artifactId>flink-connector-elasticsearch5_${scala.binary.version}</artifactId>-->
+        <!--<version>${flink.version}</version>-->
         <!--</dependency>-->
         <!--<dependency>-->
-            <!--<groupId>org.apache.flink</groupId>-->
-            <!--<artifactId>flink-connector-elasticsearch6_${scala.binary.version}</artifactId>-->
-            <!--<version>${flink.version}</version>-->
+        <!--<groupId>org.apache.flink</groupId>-->
+        <!--<artifactId>flink-connector-elasticsearch6_${scala.binary.version}</artifactId>-->
+        <!--<version>${flink.version}</version>-->
         <!--</dependency>-->
         <!--<dependency>-->
-            <!--<groupId>org.apache.flink</groupId>-->
-            <!--<artifactId>flink-shaded-hadoop2</artifactId>-->
-            <!--<version>2.8.3</version>-->
+        <!--<groupId>org.apache.flink</groupId>-->
+        <!--<artifactId>flink-shaded-hadoop2</artifactId>-->
+        <!--<version>2.8.3</version>-->
         <!--</dependency>-->
         <dependency>
             <groupId>org.apache.flink</groupId>
@@ -170,14 +170,14 @@
             <version>${lombok.version}</version>
         </dependency>
         <!--<dependency>-->
-            <!--<groupId>com.alibaba</groupId>-->
-            <!--<artifactId>fastjson</artifactId>-->
-            <!--<version>${fastjson.versoiin}</version>-->
+        <!--<groupId>com.alibaba</groupId>-->
+        <!--<artifactId>fastjson</artifactId>-->
+        <!--<version>${fastjson.versoiin}</version>-->
         <!--</dependency>-->
         <!--<dependency>-->
-            <!--<groupId>org.codehaus.groovy</groupId>-->
-            <!--<artifactId>groovy-all</artifactId>-->
-            <!--<version>${groovy.version}</version>-->
+        <!--<groupId>org.codehaus.groovy</groupId>-->
+        <!--<artifactId>groovy-all</artifactId>-->
+        <!--<version>${groovy.version}</version>-->
         <!--</dependency>-->
         <dependency>
             <groupId>org.apache.flink</groupId>
@@ -264,15 +264,15 @@
             </exclusions>
         </dependency>
         <!--<dependency>-->
-            <!--<groupId>org.elasticsearch</groupId>-->
-            <!--<artifactId>elasticsearch</artifactId>-->
-            <!--<version>${elasticsearch.version}</version>-->
-            <!--<exclusions>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>jopt-simple</artifactId>-->
-                    <!--<groupId>net.sf.jopt-simple</groupId>-->
-                <!--</exclusion>-->
-            <!--</exclusions>-->
+        <!--<groupId>org.elasticsearch</groupId>-->
+        <!--<artifactId>elasticsearch</artifactId>-->
+        <!--<version>${elasticsearch.version}</version>-->
+        <!--<exclusions>-->
+        <!--<exclusion>-->
+        <!--<artifactId>jopt-simple</artifactId>-->
+        <!--<groupId>net.sf.jopt-simple</groupId>-->
+        <!--</exclusion>-->
+        <!--</exclusions>-->
         <!--</dependency>-->
         <dependency>
             <groupId>org.elasticsearch.client</groupId>
@@ -389,165 +389,165 @@
             <version>${dbcp.version}</version>
         </dependency>
         <!--<dependency>-->
-            <!--<groupId>org.apache.hadoop</groupId>-->
-            <!--<artifactId>hadoop-common</artifactId>-->
-            <!--<version>${hadoop.version}</version>-->
-            <!--<exclusions>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>snappy-java</artifactId>-->
-                    <!--<groupId>org.xerial.snappy</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>slf4j-api</artifactId>-->
-                    <!--<groupId>org.slf4j</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>jackson-core-asl</artifactId>-->
-                    <!--<groupId>org.codehaus.jackson</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>jackson-mapper-asl</artifactId>-->
-                    <!--<groupId>org.codehaus.jackson</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>commons-compress</artifactId>-->
-                    <!--<groupId>org.apache.commons</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>commons-collections</artifactId>-->
-                    <!--<groupId>commons-collections</groupId>-->
-                <!--</exclusion>-->
-                <!--&lt;!&ndash;<exclusion>&ndash;&gt;-->
-                <!--&lt;!&ndash;<artifactId>commons-beanutils</artifactId>&ndash;&gt;-->
-                <!--&lt;!&ndash;<groupId>commons-beanutils</groupId>&ndash;&gt;-->
-                <!--&lt;!&ndash;</exclusion>&ndash;&gt;-->
-                <!--<exclusion>-->
-                    <!--<artifactId>commons-logging</artifactId>-->
-                    <!--<groupId>commons-logging</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>commons-lang</artifactId>-->
-                    <!--<groupId>commons-lang</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>commons-math3</artifactId>-->
-                    <!--<groupId>org.apache.commons</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>zookeeper</artifactId>-->
-                    <!--<groupId>org.apache.zookeeper</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>commons-codec</artifactId>-->
-                    <!--<groupId>commons-codec</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>guava</artifactId>-->
-                    <!--<groupId>com.google.guava</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>httpclient</artifactId>-->
-                    <!--<groupId>org.apache.httpcomponents</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>httpcore</artifactId>-->
-                    <!--<groupId>org.apache.httpcomponents</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>jsr305</artifactId>-->
-                    <!--<groupId>com.google.code.findbugs</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>slf4j-log4j12</artifactId>-->
-                    <!--<groupId>org.slf4j</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>jackson-jaxrs</artifactId>-->
-                    <!--<groupId>org.codehaus.jackson</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>jackson-xc</artifactId>-->
-                    <!--<groupId>org.codehaus.jackson</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>jsp-api</artifactId>-->
-                    <!--<groupId>javax.servlet.jsp</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>commons-beanutils</artifactId>-->
-                    <!--<groupId>commons-beanutils</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>commons-beanutils-core</artifactId>-->
-                    <!--<groupId>commons-beanutils</groupId>-->
-                <!--</exclusion>-->
-            <!--</exclusions>-->
+        <!--<groupId>org.apache.hadoop</groupId>-->
+        <!--<artifactId>hadoop-common</artifactId>-->
+        <!--<version>${hadoop.version}</version>-->
+        <!--<exclusions>-->
+        <!--<exclusion>-->
+        <!--<artifactId>snappy-java</artifactId>-->
+        <!--<groupId>org.xerial.snappy</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<artifactId>slf4j-api</artifactId>-->
+        <!--<groupId>org.slf4j</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<artifactId>jackson-core-asl</artifactId>-->
+        <!--<groupId>org.codehaus.jackson</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<artifactId>jackson-mapper-asl</artifactId>-->
+        <!--<groupId>org.codehaus.jackson</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<artifactId>commons-compress</artifactId>-->
+        <!--<groupId>org.apache.commons</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<artifactId>commons-collections</artifactId>-->
+        <!--<groupId>commons-collections</groupId>-->
+        <!--</exclusion>-->
+        <!--&lt;!&ndash;<exclusion>&ndash;&gt;-->
+        <!--&lt;!&ndash;<artifactId>commons-beanutils</artifactId>&ndash;&gt;-->
+        <!--&lt;!&ndash;<groupId>commons-beanutils</groupId>&ndash;&gt;-->
+        <!--&lt;!&ndash;</exclusion>&ndash;&gt;-->
+        <!--<exclusion>-->
+        <!--<artifactId>commons-logging</artifactId>-->
+        <!--<groupId>commons-logging</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<artifactId>commons-lang</artifactId>-->
+        <!--<groupId>commons-lang</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<artifactId>commons-math3</artifactId>-->
+        <!--<groupId>org.apache.commons</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<artifactId>zookeeper</artifactId>-->
+        <!--<groupId>org.apache.zookeeper</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<artifactId>commons-codec</artifactId>-->
+        <!--<groupId>commons-codec</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<artifactId>guava</artifactId>-->
+        <!--<groupId>com.google.guava</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<artifactId>httpclient</artifactId>-->
+        <!--<groupId>org.apache.httpcomponents</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<artifactId>httpcore</artifactId>-->
+        <!--<groupId>org.apache.httpcomponents</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<artifactId>jsr305</artifactId>-->
+        <!--<groupId>com.google.code.findbugs</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<artifactId>slf4j-log4j12</artifactId>-->
+        <!--<groupId>org.slf4j</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<artifactId>jackson-jaxrs</artifactId>-->
+        <!--<groupId>org.codehaus.jackson</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<artifactId>jackson-xc</artifactId>-->
+        <!--<groupId>org.codehaus.jackson</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<artifactId>jsp-api</artifactId>-->
+        <!--<groupId>javax.servlet.jsp</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<artifactId>commons-beanutils</artifactId>-->
+        <!--<groupId>commons-beanutils</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<artifactId>commons-beanutils-core</artifactId>-->
+        <!--<groupId>commons-beanutils</groupId>-->
+        <!--</exclusion>-->
+        <!--</exclusions>-->
         <!--</dependency>-->
         <!--<dependency>-->
-            <!--<groupId>org.apache.hbase</groupId>-->
-            <!--<artifactId>hbase-common</artifactId>-->
-            <!--<version>${hbase.version}</version>-->
-            <!--<exclusions>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>guava</artifactId>-->
-                    <!--<groupId>com.google.guava</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>slf4j-log4j12</artifactId>-->
-                    <!--<groupId>org.slf4j</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>slf4j-api</artifactId>-->
-                    <!--<groupId>org.slf4j</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>hadoop-common</artifactId>-->
-                    <!--<groupId>org.apache.hadoop</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>commons-codec</artifactId>-->
-                    <!--<groupId>commons-codec</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>commons-compress</artifactId>-->
-                    <!--<groupId>org.apache.commons</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>commons-logging</artifactId>-->
-                    <!--<groupId>commons-logging</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>hadoop-annotations</artifactId>-->
-                    <!--<groupId>org.apache.hadoop</groupId>-->
-                <!--</exclusion>-->
-            <!--</exclusions>-->
+        <!--<groupId>org.apache.hbase</groupId>-->
+        <!--<artifactId>hbase-common</artifactId>-->
+        <!--<version>${hbase.version}</version>-->
+        <!--<exclusions>-->
+        <!--<exclusion>-->
+        <!--<artifactId>guava</artifactId>-->
+        <!--<groupId>com.google.guava</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<artifactId>slf4j-log4j12</artifactId>-->
+        <!--<groupId>org.slf4j</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<artifactId>slf4j-api</artifactId>-->
+        <!--<groupId>org.slf4j</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<artifactId>hadoop-common</artifactId>-->
+        <!--<groupId>org.apache.hadoop</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<artifactId>commons-codec</artifactId>-->
+        <!--<groupId>commons-codec</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<artifactId>commons-compress</artifactId>-->
+        <!--<groupId>org.apache.commons</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<artifactId>commons-logging</artifactId>-->
+        <!--<groupId>commons-logging</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<artifactId>hadoop-annotations</artifactId>-->
+        <!--<groupId>org.apache.hadoop</groupId>-->
+        <!--</exclusion>-->
+        <!--</exclusions>-->
         <!--</dependency>-->
         <!--<dependency>-->
-            <!--<groupId>org.apache.hbase</groupId>-->
-            <!--<artifactId>hbase-client</artifactId>-->
-            <!--<version>${hbase.version}</version>-->
-            <!--<exclusions>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>slf4j-log4j12</artifactId>-->
-                    <!--<groupId>org.slf4j</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>hadoop-auth</artifactId>-->
-                    <!--<groupId>org.apache.hadoop</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>log4j</artifactId>-->
-                    <!--<groupId>log4j</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>slf4j-api</artifactId>-->
-                    <!--<groupId>org.slf4j</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>hadoop-common</artifactId>-->
-                    <!--<groupId>org.apache.hadoop</groupId>-->
-                <!--</exclusion>-->
-            <!--</exclusions>-->
+        <!--<groupId>org.apache.hbase</groupId>-->
+        <!--<artifactId>hbase-client</artifactId>-->
+        <!--<version>${hbase.version}</version>-->
+        <!--<exclusions>-->
+        <!--<exclusion>-->
+        <!--<artifactId>slf4j-log4j12</artifactId>-->
+        <!--<groupId>org.slf4j</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<artifactId>hadoop-auth</artifactId>-->
+        <!--<groupId>org.apache.hadoop</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<artifactId>log4j</artifactId>-->
+        <!--<groupId>log4j</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<artifactId>slf4j-api</artifactId>-->
+        <!--<groupId>org.slf4j</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<artifactId>hadoop-common</artifactId>-->
+        <!--<groupId>org.apache.hadoop</groupId>-->
+        <!--</exclusion>-->
+        <!--</exclusions>-->
         <!--</dependency>-->
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -575,10 +575,21 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.apache.flink</groupId>-->
+            <!--<artifactId>flink-parquet_2.11</artifactId>-->
+            <!--<version>${flink.version}</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-shaded-hadoop-2</artifactId>
-            <version>2.4.1-8.0</version>
+            <version>2.8.3-9.0</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>commons-lang</artifactId>
+                    <groupId>commons-lang</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <!--<dependency>-->
         <!--<groupId>org.apache.flink</groupId>-->
@@ -596,9 +607,9 @@
             <version>${flink.version}</version>
         </dependency>
         <!--<dependency>-->
-            <!--<groupId>com.microsoft.hadoop</groupId>-->
-            <!--<artifactId>microsoft-hadoop-azure</artifactId>-->
-            <!--<version>0.0.4</version>-->
+        <!--<groupId>com.microsoft.hadoop</groupId>-->
+        <!--<artifactId>microsoft-hadoop-azure</artifactId>-->
+        <!--<version>0.0.4</version>-->
         <!--</dependency>-->
         <!--<dependency>-->
         <!--<groupId>org.apache.flink</groupId>-->

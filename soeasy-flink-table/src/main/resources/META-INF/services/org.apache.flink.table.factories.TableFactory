@@ -16,6 +16,7 @@
 #cn.com.yusys.yusp.stream.connector.elastic.Elasticsearch6UpsertTableSinkFactory
 org.apache.flink.streaming.connectors.kafka.KafkaTableSourceSinkFactory
 org.apache.flink.formats.json.JsonRowFormatFactory
+org.apache.flink.formats.csv.CsvRowFormatFactory
 #org.apache.flink.table.planner.delegation.BlinkExecutorFactory
 #org.apache.flink.table.executor.StreamExecutorFactory
 #org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchUpsertTableSinkFactoryBase

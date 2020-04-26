@@ -17,13 +17,13 @@ import java.util.Properties;
 
 public class KafkaConnectDemo {
 
-    static String topics = "yusysdb";
-    static String groupID = "testConn";
-    static String transactionTimeOut = "35000";
-    static String zkTimeOut = "5000";
-    static String fetchSize = "256";
+    public static String topics = "yusysdb";
+    public static String groupID = "testConn";
+    public static String transactionTimeOut = "35000";
+    public static String zkTimeOut = "5000";
+    public static String fetchSize = "256";
     public static String tableName = "testKafka";
-    static String servers = "192.168.56.102:9092";
+    public static String servers = "192.168.56.102:9092";
 
     public static void main(String[] args) throws Exception {
 //{"id":"123","name":"123"}

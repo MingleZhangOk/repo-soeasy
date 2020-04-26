@@ -264,7 +264,7 @@ public class MySQLConnectUpsert {
         return upsertSQL;
     }
 
-    private static List<TableFieldPojo> getFieldsList() {
+    public static List<TableFieldPojo> getFieldsList() {
         List<TableFieldPojo> list = new ArrayList();
         TableFieldPojo tableFieldPojo01 = new TableFieldPojo();
         tableFieldPojo01.setFieldCode("id");
