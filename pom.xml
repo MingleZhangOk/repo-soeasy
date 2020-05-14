@@ -20,6 +20,7 @@
         <module>soeasy-spring-boot</module>
         <module>soeasy-spring-data</module>
         <module>soeasy-spring-cloud</module>
+        <module>soeasy-canal-test</module>
         <!--<module>soeasy-mingsir-web</module>-->
     </modules>
 
