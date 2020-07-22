@@ -1,6 +1,6 @@
 package com.mingzhang.repo.license;
 
-import org.apache.log4j.PropertyConfigurator;
+//import org.apache.log4j.PropertyConfigurator;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -83,9 +83,9 @@ public class CommonParameter {
 
         File logFile = new File(confFilePath + "log4j.properties");
 
-        if (logFile.exists()) {
-            PropertyConfigurator.configure(confFilePath + "log4j.properties");
-        }
+//        if (logFile.exists()) {
+//            PropertyConfigurator.configure(confFilePath + "log4j.properties");
+//        }
     }
 
 }
