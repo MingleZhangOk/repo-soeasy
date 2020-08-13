@@ -25,6 +25,7 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLClassLoader;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -66,8 +67,17 @@ public class ClassLoaderManager {
         });
     }
 
-    public static void main(String[] args) {
-        retrieveClassLoad("D:\\");
+    public static void main(String[] args) throws Exception {
+        File file = new File("D:\\");
+        URL[] urls = new URL[1];
+        urls[0] = file.toURI().toURL();
+        System.out.println(urls);
+        System.out.println(urls[0]);
+        ClassLoader parentClassLoader = Thread.currentThread().getContextClassLoader();
+        URLClassLoader urlClassLoader = new URLClassLoader(urls, parentClassLoader);
+        System.out.println(urlClassLoader);
+        DtClassLoader classLoader = new DtClassLoader(urls, parentClassLoader);
+        System.out.println(classLoader);
     }
 
     public static URL[] getPluginJarUrls(String pluginDir) throws MalformedURLException {
