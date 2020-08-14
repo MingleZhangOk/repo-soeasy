@@ -1,0 +1,14 @@
+*.pyc
+*.rdb
+*.pyo
+*.log
+*.sqlite
+*.class
+*.iml
+.idea/
+mongo/
+output/
+venv/
+target/
+logs/
+
