@@ -3,29 +3,23 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>soeasy-flink-connectors</artifactId>
+        <artifactId>repo-soeasy</artifactId>
         <groupId>org.mingzhang.repo</groupId>
         <version>0.0.1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>soeasy-connector-common</artifactId>
+    <artifactId>soeasy-QLExpress-parser</artifactId>
 
     <dependencies>
         <dependency>
-            <groupId>org.mingzhang.repo</groupId>
-            <artifactId>soeasy-connector-api</artifactId>
-            <version>0.0.1</version>
+            <groupId>cn.minsin</groupId>
+            <artifactId>mutils-core</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.apache.flink</groupId>
-            <artifactId>flink-connector-elasticsearch-base_2.11</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.flink</groupId>
-            <artifactId>flink-connector-elasticsearch6_2.11</artifactId>
+            <groupId>com.alibaba</groupId>
+            <artifactId>QLExpress</artifactId>
         </dependency>
     </dependencies>
-
 
 </project>

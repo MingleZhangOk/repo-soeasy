@@ -10,7 +10,20 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>soeasy-spark-demo</artifactId>
-
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-shaded-hadoop-2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+        </dependency>
+    </dependencies>
     <build>
         <finalName>soeasy-spark-demo</finalName>
         <plugins>
@@ -64,4 +77,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

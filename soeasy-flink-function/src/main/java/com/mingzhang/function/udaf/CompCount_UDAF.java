@@ -10,6 +10,7 @@ public class CompCount_UDAF extends AggregateFunction<Long, CompCount_UDAF.Count
     }
 
     //初始化count UDAF的accumulator。
+    @Override
     public CountAccum createAccumulator() {
         CountAccum acc = new CountAccum();
         acc.total = 0;
@@ -17,6 +18,7 @@ public class CompCount_UDAF extends AggregateFunction<Long, CompCount_UDAF.Count
     }
 
     //getValue提供了，如何通过存放状态的accumulator，计算count UDAF的结果的方法。
+    @Override
     public Long getValue(CountAccum accumulator) {
         return accumulator.total;
     }
