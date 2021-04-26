@@ -43,7 +43,7 @@
         <scala.binary.version>2.11</scala.binary.version>
         <maven.compiler.source>1.7</maven.compiler.source>
         <lombok.version>1.16.18</lombok.version>
-        <commons-io.version>2.6</commons-io.version>
+        <commons-io.version>2.7</commons-io.version>
         <minsin.mutils-core.version>0.3.7</minsin.mutils-core.version>
         <alibaba.QLExpress.version>3.2.4</alibaba.QLExpress.version>
     </properties>
